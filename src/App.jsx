@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import './App.css';
 
-const COVALENT_API_KEY = "cqt_rQTJy7mvvBRkrBc7VwmjTG8yXMYD";
+const COVALENT_API_KEY = process.env.REACT_APP_COVALENT_API_KEY;
 
 const chainIds = {
   ethereum: 1,
