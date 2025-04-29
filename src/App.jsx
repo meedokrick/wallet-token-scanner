@@ -91,7 +91,7 @@ function App() {
           placeholder="Enter wallet address"
           value={walletAddress}
           onChange={e => setWalletAddress(e.target.value)}
-          style={{ padding: "10px", width: "400px", marginRight: "10px" }}
+          style={{ padding: "10px", width: "400px", marginRight: "10px", color: "black" }}
         />
         <button
           onClick={handleScan}
@@ -105,7 +105,7 @@ function App() {
       {tokens.length > 0 && (
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
-            <tr style={{ backgroundColor: "#f5f5f5" }}>
+            <tr style={{ backgroundColor: "#f5f5f5", color: "black" }}>
               <th style={thStyle}>Chain</th>
               <th style={thStyle}>Token</th>
               <th style={thStyle}>Balance</th>
@@ -114,7 +114,7 @@ function App() {
           </thead>
           <tbody>
             {tokens.map((token, index) => (
-              <tr key={index}>
+              <tr style={{ color: "black"}} key={index}>
                 <td style={tdStyle}>{token.chain}</td>
                 <td style={tdStyle}>{token.symbol}</td>
                 <td style={tdStyle}>{token.balance}</td>
